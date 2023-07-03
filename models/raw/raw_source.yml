@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: raw
+    database: Pagila
+    schema: public
+
+    freshness:
+      warn_after:
+        count: 5
+        period: minute
+      error_after:
+        count: 5
+        period: minute
+    loaded_at_field: "last_update"
+
+
+    tables:
+      - name: category
+        description: 'test category'
+        columns:
+          - name: category_id
+            tests:
+            - unique
+            - not_null
+          - name: name
+          - name: last_update
+          - name: test
+
+
+
+ 

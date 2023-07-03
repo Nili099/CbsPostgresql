@@ -5,4 +5,9 @@
 }}
 
 Select *
-from public."category"
+from {{source('raw', 'category')}} 
+
+
+
+
+
