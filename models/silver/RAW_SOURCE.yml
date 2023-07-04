@@ -7,11 +7,11 @@ sources:
 
     freshness:
       warn_after:
-        count: 5
-        period: minute
+        count: 2
+        period: hour
       error_after:
-        count: 5
-        period: minute
+        count: 3
+        period: hour
     loaded_at_field: "last_update"
 
 
@@ -26,6 +26,16 @@ sources:
           - name: name
           - name: last_update
           - name: test
+
+      - name: actor
+
+      - name: payment
+
+      - name: customer
+
+      - name: staff
+
+      - name: rental
 
 
 

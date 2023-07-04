@@ -1,14 +1,13 @@
 select 
-    md5(last_update || category_id) as unique_id,
-    *
+    concat (last_update || category_id) as unique_id
+    
 from {{source('raw', 'category')}} 
 
 Select 
-  concat(last_update, '_' ,category_id) as _surrogate_key,
-  * 
+  md5 (concat(last_update, category_id)) as _surrogate_key
 from {{source('raw', 'category')}} 
 
-select *,
+select 
   concat(
     coalesce(cast(last_update as string), '_this_used_to_be_null_'),
     coalesce(cast(category_id as string), '_this_used_to_be_null_')

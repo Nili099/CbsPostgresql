@@ -1,9 +1,9 @@
-
 {{
     config(
         materialized='table'
     )
 }}
 
+
 select *
-from public."payment"
+from {{source('raw', 'staff')}} 

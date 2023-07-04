@@ -6,4 +6,4 @@
 
 
 select *
-from public."actor"
+from {{source('raw', 'rental')}} 

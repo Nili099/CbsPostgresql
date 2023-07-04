@@ -7,7 +7,7 @@
       unique_key='category_id',
 
       strategy='timestamp',
-      updated_at='last_update',
+      updated_at='last_update'
     )
 }}
 
