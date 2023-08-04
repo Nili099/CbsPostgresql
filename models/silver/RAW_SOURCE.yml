@@ -4,17 +4,6 @@ sources:
   - name: raw
     database: Pagila
     schema: public
-
-    freshness:
-      warn_after:
-        count: 2
-        period: hour
-      error_after:
-        count: 3
-        period: hour
-    loaded_at_field: "last_update"
-
-
     tables:
       - name: category
         description: 'test category'
@@ -39,4 +28,8 @@ sources:
 
 
 
- 
+  
+
+
+
+   
