@@ -36,3 +36,9 @@ models:
     # Applies to all files under models/example/
     example:
       materialized: view
+
+    model1:
+      +schema: model1
+
+    model2:
+      +schema: model2
