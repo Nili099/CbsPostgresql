@@ -1,0 +1,24 @@
+# profiles.yml
+
+profiles:
+  dev:
+    target: dev
+    outputs:
+      dev:
+        type: postgres
+        host: 127.0.0.1
+        user: "{{ env_var('admincbsconsulytic') }}"
+        password: "{{ env_var('Con1Su2Ly3Tic4') }}"
+        database: Pagila
+        schema: public
+
+  test:
+    target: test
+    outputs:
+      test:
+        type: postgres
+        host: 127.0.0.1
+        user: "{{ env_var('admincbsconsulytic') }}"
+        password: "{{ env_var('Con1Su2Ly3Tic4') }}"
+        database: Pagila_UAT
+        schema: public
